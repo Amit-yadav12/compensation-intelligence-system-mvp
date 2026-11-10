@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Inter } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { getSessionUser } from "@/lib/auth/session";
@@ -37,6 +38,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
           {children}
         </main>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
